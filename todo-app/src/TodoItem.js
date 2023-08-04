@@ -1,8 +1,7 @@
 import React from "react";
-const TodoItem = (title, content, key, ala) => {
+const TodoItem = ({ title, content, idx }) => {
     const handleDragStart = (event) => {
-        console.log(ala)
-        event.dataTransfer.setData("key", key)
+        event.dataTransfer.setData("key", idx)
     }
     return (
         <div draggable="true" className="item" onDragStart={handleDragStart}>
